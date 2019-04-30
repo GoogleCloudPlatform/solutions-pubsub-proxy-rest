@@ -1,0 +1,49 @@
+# Copyright 2019 Google Inc.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#    http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+swagger: "2.0"
+info:
+  description: "Pub/Sub proxy exposed as an Endpoint API"
+  title: "PubSub Proxy"
+  version: "1.0.0"
+host: "pubtest.endpoints.[PROJECT_ID].cloud.goog"
+consumes:
+  - "application/json"
+produces:
+  - "application/json"
+schemes:
+  - "https"
+paths:
+  "/publish":
+    post:
+      description: "Publishes message to Cloud Pub/Sub"
+      operationId: "publish"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Empty"
+      security:
+       - google_id_token: []
+securityDefinitions:
+  google_id_token:
+    authorizationUrl: ""
+    flow: "implicit"
+    type: "oauth2"
+    x-google-issuer: "https://accounts.google.com"
+    x-google-jwks_uri: "https://www.googleapis.com/oauth2/v3/certs"
+    x-google-audiences: "pubtest.endpoints.[PROJECT_ID].cloud.goog"
+x-google-endpoints:
+- name: "pubtest.endpoints.[PROJECT_ID].cloud.goog"
+  target: "[IP_ADDRESS]"
