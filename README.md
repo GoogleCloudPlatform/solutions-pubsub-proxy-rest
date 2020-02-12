@@ -9,7 +9,7 @@ This repository provides sample implementation of a proxy service which enables 
 - Authenticates incoming end user requests. 
 - Forwards authenticated requests to Pub/Sub using appropriate [Cloud IAM](https://cloud.google.com/iam/docs/overview) permissions
 
-The detailed steps to run this proxy on GCP is covered in the tutorial available [here]().
+The detailed steps to run this proxy on GCP is covered in the tutorial available [here](https://cloud.google.com/solutions/setting-up-a-pubsub-proxy-for-mobile-clients-on-gke).
 
 ## Google Cloud Products Used or Referenced:
 - Cloud PubSub
@@ -19,7 +19,7 @@ The detailed steps to run this proxy on GCP is covered in the tutorial available
 - Container Registry
 
 ## Local Deployment & Testing
-For production grade deployments, refer to the [detailed solution post]().
+For production grade deployments, refer to the [detailed solution post](https://cloud.google.com/solutions/setting-up-a-pubsub-proxy-for-mobile-clients-on-gke).
 
 Clone repository:
 ```
