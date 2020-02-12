@@ -80,7 +80,7 @@ curl -i -X POST localhost:8080/publish \
 On the terminal running the proxy, check the logs to verify if the message was successfully published to Pub/Sub.
 
 ### Deploy Proxy on GKE
-Detailed steps to run this proxy on GCP is covered in the tutorial [here]().
+Detailed steps to run this proxy on GCP is covered in the tutorial [here](https://cloud.google.com/solutions/setting-up-a-pubsub-proxy-for-mobile-clients-on-gke).
 
 ## Cleaning Up
 Remove the private key:
